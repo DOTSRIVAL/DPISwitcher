@@ -1,4 +1,4 @@
-package com.dpitile.switcher;
+package com.dpi.switcher;
 
 import android.os.Build;
 import android.util.Log;

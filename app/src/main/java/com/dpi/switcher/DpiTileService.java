@@ -1,4 +1,4 @@
-package com.dpitile.switcher;
+package com.dpi.switcher;
 
 import android.content.ComponentName;
 import android.content.Context;

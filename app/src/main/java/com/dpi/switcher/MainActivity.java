@@ -1,4 +1,4 @@
-package com.dpitile.switcher;
+package com.dpi.switcher;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -398,7 +398,7 @@ public class MainActivity extends Activity {
     }
 
     private void addQuickTileIfNeeded() {
-        String tileName = "com.dpitile.switcher/.DpiTileService";
+        String tileName = "com.dpi.switcher/.DpiTileService";
         // Use 'settings get secure sysui_qs_tiles' — gives clean comma-separated list, no headers
         RootManager.exec("settings get secure sysui_qs_tiles", result -> {
             if (result == null || result.stdout == null) return;

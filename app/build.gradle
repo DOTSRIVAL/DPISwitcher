@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.dpitile.switcher'
+    namespace 'com.dpi.switcher'
     compileSdk 34
 
     signingConfigs {
@@ -22,7 +22,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.dpitile.switcher"
+        applicationId "com.dpi.switcher"
         minSdk 21
         targetSdk 35
         versionCode 1
