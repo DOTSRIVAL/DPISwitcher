@@ -1,4 +1,4 @@
-# 🖥️ DPI Switcher — For POCO & Xiaomi Devices
+# 🖥️ DPI Switcher — For All Devices
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
@@ -35,7 +35,7 @@
 ### Requirements
 - Android 9+ (API 28+)
 - **Root** (Magisk / KernelSU) **OR** **Shizuku** (ADB Wireless Debugging)
-- POCO / Xiaomi device recommended (works on most Android devices)
+- Works on most Android devices
 
 ### Installation
 1. Download the latest APK from [Releases](https://github.com/DOTSRIVAL/DPISwitcher/releases)
@@ -67,7 +67,7 @@ The app saves your **physical density** at first launch so it can always revert 
 | **Higher than default** | More content fits on screen, tablet-like layouts |
 | **Too high (> max safe)** | May crash some apps — use with caution |
 
-> 💡 **Tip:** Most POCO devices have a default SW around 360–410dp. Safe max is typically 480–600dp.
+> 💡 **Tip:** Most Android devices have a default SW around 360–410dp. Safe max is typically 480–600dp.
 
 ---
 
