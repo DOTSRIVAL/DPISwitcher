@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.dpitile.switcher'
+    compileSdk 34
+
+    signingConfigs {
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+            enableV3Signing true
+            enableV4Signing true
+        }
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+            enableV3Signing true
+            enableV4Signing true
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.dpitile.switcher"
+        minSdk 21
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug { 
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+        release { 
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures { buildConfig false }
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.7.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    
+    def shizuku_version = '13.1.5'
+    implementation "dev.rikka.shizuku:api:$shizuku_version"
+    implementation "dev.rikka.shizuku:provider:$shizuku_version"
+}

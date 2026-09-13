@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DPI Switcher</string>
+    <string name="tile_label">DPI Switcher</string>
+    <string name="grant_root">Grant Root Access</string>
+    <string name="add_tile">Add Quick Settings Tile</string>
+    <string name="apply">Apply</string>
+    <string name="reset">Emergency Reset</string>
+</resources>
