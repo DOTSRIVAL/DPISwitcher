@@ -1133,6 +1133,62 @@ public class MainActivity extends Activity {
             infoCard.addView(rowLayout, rowLp);
         }
 
+        // GitHub Card
+        LinearLayout githubCard = new LinearLayout(this);
+        githubCard.setOrientation(LinearLayout.HORIZONTAL);
+        githubCard.setGravity(Gravity.CENTER_VERTICAL);
+        githubCard.setPadding(dp(16), dp(16), dp(16), dp(16));
+        android.graphics.drawable.GradientDrawable ghBg = new android.graphics.drawable.GradientDrawable();
+        ghBg.setColor(Color.parseColor("#1AFFFFFF"));
+        ghBg.setCornerRadius(dp(16));
+        ghBg.setStroke(dp(1), Color.parseColor("#44FFFFFF"));
+        githubCard.setBackground(ghBg);
+
+        TextView ghIcon = new TextView(this);
+        ghIcon.setText("🐙"); 
+        ghIcon.setTextSize(24f);
+        ghIcon.setPadding(0, 0, dp(16), 0);
+        githubCard.addView(ghIcon);
+
+        LinearLayout ghTextCol = new LinearLayout(this);
+        ghTextCol.setOrientation(LinearLayout.VERTICAL);
+
+        TextView ghTitle = new TextView(this);
+        ghTitle.setText("Open Source");
+        ghTitle.setTextColor(Color.WHITE);
+        ghTitle.setTextSize(14f);
+        ghTitle.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+        ghTextCol.addView(ghTitle);
+
+        TextView ghDesc = new TextView(this);
+        ghDesc.setText("View source code on GitHub");
+        ghDesc.setTextColor(getColor(R.color.text_secondary));
+        ghDesc.setTextSize(12f);
+        ghTextCol.addView(ghDesc);
+
+        githubCard.addView(ghTextCol, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
+
+        TextView ghArrow = new TextView(this);
+        ghArrow.setText("↗");
+        ghArrow.setTextColor(getColor(R.color.accent_purple));
+        ghArrow.setTextSize(18f);
+        ghArrow.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+        githubCard.addView(ghArrow);
+
+        githubCard.setOnClickListener(v -> {
+            try {
+                android.content.Intent intent = new android.content.Intent(android.content.Intent.ACTION_VIEW);
+                intent.setData(android.net.Uri.parse("https://github.com/DOTSRIVAL/DPISwitcher"));
+                startActivity(intent);
+            } catch (Exception e) {
+                showInAppToast("Could not open browser", true);
+            }
+        });
+
+        LinearLayout.LayoutParams ghLp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        ghLp.bottomMargin = dp(16);
+        rootLayout.addView(githubCard, ghLp);
+
         // Spacer
         android.widget.Space spacer = new android.widget.Space(this);
         rootLayout.addView(spacer, new LinearLayout.LayoutParams(0, 0, 1f));
